@@ -1,0 +1,14 @@
+public class Student {
+	String name;
+	
+	public static void main(String[] args) {
+		
+		try {
+			Student s1 = new Student();
+			s1.name = "Sandro";
+			System.out.println("Name:" + s1.name);
+		} catch(Exception e) {
+			System.out.println("Error: There is no object");
+		}
+	}
+}

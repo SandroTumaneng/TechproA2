@@ -1,0 +1,24 @@
+class PasswordException extends Exception {
+	public PasswordException(String message) {
+		super(message);
+	}
+}
+
+public class Main {
+	
+	static void checkPassword(String password) throws PasswordException {
+		if (password.length() < 8) {
+			throw new PasswordException("Bawal, Dat daw mga na sa otso na letra yan");
+		} else {
+			System.out.println("Galing tngna");
+		}
+	}
+	
+	public static void main(String[] args) {
+		try {
+			checkPassword("wagotso");
+		} catch (PasswordException e) {
+			System.out.println("User-Defined Exception: " + e.getMessage());
+		}
+	}
+}
